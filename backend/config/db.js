@@ -4,5 +4,5 @@ import mongoose from "mongoose"
 }
 
 
-// 'mongodb+srv://pawarhitesh321:9421440332@cluster0.ot3o8an.mongodb.net/Food_Delivery'
+//'mongodb+srv://pawarhitesh321:9421440332@cluster0.ot3o8an.mongodb.net/Food_Delivery'
 
