@@ -1,3 +1,3 @@
 #Delishify
 Food Delivery Website
-<img src="C:\Users\hites\OneDrive\Desktop\img1.jpg" alt="Sample Image" width="300" height="200">
+<img src="https://drive.google.com/file/d/1-X69s2V8ABpVsqvPFyHoavzC0YfEiGbf/view?usp=drive_link" alt="Sample Image" width="300" height="200">
