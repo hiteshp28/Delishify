@@ -3,6 +3,7 @@ import "./List.css";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { assets } from "../../assets/assets";
+import { Children } from "react";
 
 const List = ({url}) => {
 
@@ -24,7 +25,7 @@ const List = ({url}) => {
     if (userConfirmed) {
       try {
         const response = await axios.post(`${url}/api/food/remove`, {
-          id: foodId,
+          _id: foodId,
         });
         await fetchList();
         if (response.data.success) {

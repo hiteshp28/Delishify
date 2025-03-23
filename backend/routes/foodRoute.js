@@ -18,7 +18,7 @@ const upload =multer({storage:storage1})
 
 foodRouter.post("/add",upload.single("image"),addFood) //to send the data on the server
 foodRouter.get("/list",listFood)
-foodRouter.post("/remove",removeFood)
+foodRouter.post("/remove",removeFood);
 
 
 export default foodRouter;

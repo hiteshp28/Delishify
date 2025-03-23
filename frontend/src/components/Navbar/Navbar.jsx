@@ -6,7 +6,7 @@ import { StoreContext } from '../../context/StoreContext'
 const Navbar = ({setShowLogin}) => {
 
     const[menu,SetMenu]=useState("home");
-    const {getTotalCartAmount,token,setToken}=useContext(StoreContext);
+    const {getTotalCartAmount,setCartItems,token,setToken}=useContext(StoreContext);
     const navigate=useNavigate();
     const handleMenuClick = (e, sectionId) => {
       e.preventDefault(); // Prevent default anchor behavior
@@ -21,6 +21,7 @@ const Navbar = ({setShowLogin}) => {
     };
     const logout=()=>{
       localStorage.removeItem("token");
+      setCartItems([]);
       setToken("");
       navigate("/");
     }
@@ -28,7 +29,7 @@ const Navbar = ({setShowLogin}) => {
     <div className='navbar'>
       <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
       <ul className="navbar-menu">
-      <Link to='/' onClick={()=>setMenu("home")} className={menu === "home" ? "active" : ""}>Home</Link>
+      <Link to='/' onClick={()=>SetMenu("home")} className={menu === "home" ? "active" : ""}>Home</Link>
             <Link to="/" onClick={(e) => handleMenuClick(e, "explore-menu")} className={menu === "menu" ? "active" : ""}>Menu</Link>
             <Link to="/" onClick={(e) => handleMenuClick(e, "app-download")} className={menu === "mobile-app" ? "active" : ""}>Mobile-app</Link>
             <Link to="/" onClick={(e) => handleMenuClick(e, "footer")} className={menu === "contact us" ? "active" : ""}>Contact us</Link>

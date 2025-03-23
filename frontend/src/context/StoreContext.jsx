@@ -16,6 +16,11 @@ const StoreContextProvider=(props)=>{
 
 
     const addToCart=async (itemId)=>{
+        if(!token)
+        {
+            toast.error("User not logged in!");
+            return;
+        }
         if(!cartItems[itemId]){
             setCartItems((prev)=>({...prev,[itemId]:1}))
         }
