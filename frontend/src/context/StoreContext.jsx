@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { food_list } from "../assets/assets";
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -11,7 +10,6 @@ const StoreContextProvider=(props)=>{
     const [food_list,setFoodList]=useState([])
     const [cartItems,setCartItems]=useState({});
     const url = import.meta.env.BACKEND_URL;
-    console.log(url);
     const [token,setToken]=useState("")
 
 
