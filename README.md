@@ -56,8 +56,8 @@ To get the project up and running on your local machine, follow these instructio
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone [https://github.com/your-username/your-repository.git](https://github.com/hiteshp28/Delishify.git)
+cd Delishify
 ```
 #### 2. Run the backend,Frontend and Admin 
 
