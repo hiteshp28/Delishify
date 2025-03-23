@@ -10,7 +10,7 @@ export default defineConfig({
         target: 'http://hitesh2.ap-south-1.elasticbeanstalk.com',
         changeOrigin: true,
         rewrite: (path) => path.replace('/^\/api/', ''),
-        secure: false
+        secure: true
       }
     }
   }
