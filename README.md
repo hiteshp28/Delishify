@@ -8,7 +8,7 @@ This project is a web application designed for managing a restaurant menu, order
   ![Home Page](https://github.com/user-attachments/assets/b75dc41b-7482-423e-a917-676cd9bef4f8)
   
 - **Explore Menu Page**: Shows the list of items available for purchase, allowing users to add them to their cart.
-  <\br>
+  
   ![Explore Menu Page](https://github.com/user-attachments/assets/2b004f1b-e2ba-4f90-8194-415736d08404)
   
 - **Cart Details Page**: Displays the items added to the cart with options to modify the quantity and proceed to checkout.  
