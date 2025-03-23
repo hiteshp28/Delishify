@@ -8,6 +8,17 @@ const Navbar = ({setShowLogin}) => {
     const[menu,SetMenu]=useState("home");
     const {getTotalCartAmount,token,setToken}=useContext(StoreContext);
     const navigate=useNavigate();
+    const handleMenuClick = (e, sectionId) => {
+      e.preventDefault(); // Prevent default anchor behavior
+    
+      // Navigate to home page first
+      navigate("/", { replace: true });
+    
+      // Use a small delay to ensure the home page loads before scrolling
+      setTimeout(() => {
+        window.location.hash = sectionId; // Set hash manually
+      }, 100);
+    };
     const logout=()=>{
       localStorage.removeItem("token");
       setToken("");
@@ -17,10 +28,10 @@ const Navbar = ({setShowLogin}) => {
     <div className='navbar'>
       <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
       <ul className="navbar-menu">
-        <Link to='/' onClick={()=>SetMenu("home")} className={menu==="home"?"active":""}>Home</Link>
-        <a href='#explore-menu' onClick={()=>SetMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
-        <a href='#app-download' onClick={()=>SetMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile App</a>
-        <a href='#footer' onClick={()=>SetMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a>
+      <Link to='/' onClick={()=>setMenu("home")} className={menu === "home" ? "active" : ""}>Home</Link>
+            <Link to="/" onClick={(e) => handleMenuClick(e, "explore-menu")} className={menu === "menu" ? "active" : ""}>Menu</Link>
+            <Link to="/" onClick={(e) => handleMenuClick(e, "app-download")} className={menu === "mobile-app" ? "active" : ""}>Mobile-app</Link>
+            <Link to="/" onClick={(e) => handleMenuClick(e, "footer")} className={menu === "contact us" ? "active" : ""}>Contact us</Link>
       </ul>
       <div className="navbar-right">
         <div className="navbar-search-icon">

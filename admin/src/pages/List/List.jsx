@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./List.css";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { assets } from "../../assets/assets";
 
 const List = ({url}) => {
 
@@ -62,7 +63,7 @@ const List = ({url}) => {
               <img
                 onClick={() => removeFood(item._id)}
                 className="cursor"
-                src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/remove-from-cart-icon.png"
+                src={assets.remove_cart}
               />
             </div>
           );

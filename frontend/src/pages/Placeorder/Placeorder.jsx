@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Verify from '../Verify/Verify'
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, food_list, cartItems, url } =
     useContext(StoreContext);
@@ -25,6 +26,20 @@ const PlaceOrder = () => {
     const value = event.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
+  // const verifyPayment = async (session_url,orderId) => {
+  //     const urlObj = new URL(session_url);  // Convert to URL object
+  //     const params = new URLSearchParams(urlObj.search); // Extract query parameters
+
+  //     const success = params.get("success"); 
+  //     console.log("Success"+ success);
+  //         const response = await axios.post(url+"/api/order/verify",{success,orderId});
+  //         if (response.data.success){
+  //             navigate("/myorders");
+  //         }
+  //         else {
+  //             navigate("/")
+  //         }
+  //     }
 
   const placeOrder = async (event) => {
     event.preventDefault();
@@ -45,7 +60,7 @@ const PlaceOrder = () => {
       headers: { token },
     });
     if (response.data.success) {
-      const { session_url } = response.data;
+      const { session_url} = response.data;
       window.location.replace(session_url);
     } else {
       alert("Error");

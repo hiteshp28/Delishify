@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
+import { assets } from "../../assets/assets";
 const Cart = () => {
   const { cartItems, food_list, getTotalCartAmount, removeFromCart ,url} =
     useContext(StoreContext);
@@ -23,7 +24,7 @@ const Cart = () => {
           if (cartItems[item._id] > 0) {
             return (
               <>
-                <div className="cart-items-title cart-items-item">
+                <div key={index} className="cart-items-title cart-items-item">
                   <img src={url+"/images/"+item.image} alt="" />
                   <p>{item.name}</p>
                   <p>₹{item.price}</p>
@@ -32,8 +33,8 @@ const Cart = () => {
                   <img
                     onClick={() => removeFromCart(item._id)}
                     className="cross"
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/remove-from-cart-icon.png"
-                    alt=""
+                    src={assets.remove_cart}
+                    alt="remove_cart"
                   />
                 </div>
                 <hr />

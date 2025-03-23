@@ -14,7 +14,8 @@ const port =process.env.PORT || 4000
 
 
 //middleware
-app.use(express.json()) //using this middleware whenever we get request from frontend to backend that will be get parsed using json
+app.use(express.json()) //using this middleware whenever we get request from 
+// frontend to backend that will be get parsed using json
 
 app.use(cors()) //we can access the backend from any frontend 
 
