@@ -57,3 +57,13 @@ To get the project up and running on your local machine, follow these instructio
 ```bash
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
+
+#### 2. Run the backend,Frontend and Admin 
+
+```bash
+cd backend
+npm run server
+cd frontend
+npm run dev
+cd admin
+npm run dev
