@@ -1,5 +1,4 @@
 ![1](https://github.com/user-attachments/assets/b75dc41b-7482-423e-a917-676cd9bef4f8)
-![2](https://github.com/user-attachments/assets/1d3c8bcb-2673-4b41-8f4d-44e6e32a7812)
 ![3](https://github.com/user-attachments/assets/2b004f1b-e2ba-4f90-8194-415736d08404)
 ![4](https://github.com/user-attachments/assets/08e67072-c581-43f9-9070-2263991b0c48)
 ![5](https://github.com/user-attachments/assets/0371f179-36df-42ae-9a56-ffded472a529)
