@@ -28,7 +28,7 @@ const StoreContextProvider=(props)=>{
         }
         if(token)
         {
-            await axios.post("/api/cart/add",{itemId},{headers:{token}})
+            await axios.post(url+"/api/cart/add",{itemId},{headers:{token}})
             toast.success("Food item added to cart ");
         }
     }
@@ -38,7 +38,7 @@ const StoreContextProvider=(props)=>{
         
         if(token)
         {
-            await axios.post("/api/cart/remove",{itemId},{headers:{token}})
+            await axios.post(url+"/api/cart/remove",{itemId},{headers:{token}})
             toast.error(`Food item removed from cart`);
         }
     }
@@ -56,12 +56,12 @@ const StoreContextProvider=(props)=>{
     }
 
     const fetchFoodList=async ()=>{
-        const response=await axios.get("/api/food/list")
+        const response=await axios.get(url+"/api/food/list")
         setFoodList(response.data.data);
     }
     
     const loadCartData=async(token)=>{
-        const response =await axios.post("/api/cart/get",{},{headers:{token}})
+        const response =await axios.post(url+"/api/cart/get",{},{headers:{token}})
         setCartItems(response.data.cartData);
     }
 
