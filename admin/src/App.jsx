@@ -12,7 +12,7 @@ import Home from './pages/Home/Home'
 
 const App = () => {
 
-  const url="http://localhost:4000"
+  const url = import.meta.env.BACKEND_URL;
   return (
     <div>
       <ToastContainer/>
