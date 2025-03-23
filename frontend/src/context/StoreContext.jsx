@@ -9,7 +9,8 @@ const StoreContextProvider=(props)=>{
 
     const [food_list,setFoodList]=useState([])
     const [cartItems,setCartItems]=useState({});
-    const url = import.meta.env.BACKEND_URL;
+    const url = import.meta.env.VITE_BACKEND_URL;
+    console.log(url);
     const [token,setToken]=useState("")
 
 
